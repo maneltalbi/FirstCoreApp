@@ -17,7 +17,7 @@ namespace FirstCoreApp.Models
         public DbSet <News> News { get; set; }
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Teammember> Teammembers { get; set; }
-        // public DbSet<ContactUs> Contacts { get; set; }
+        public DbSet<ContactUs> Contacts { get; set; }
 
 
 
