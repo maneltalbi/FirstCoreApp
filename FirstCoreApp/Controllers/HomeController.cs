@@ -21,11 +21,12 @@ namespace FirstCoreApp.Controllers
             var result = db.Categories.ToList();
             return View(result);
         }
-
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
+          
             return View();
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
