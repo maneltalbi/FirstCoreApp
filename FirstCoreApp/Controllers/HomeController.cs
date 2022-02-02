@@ -11,16 +11,15 @@ namespace FirstCoreApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        NewsDBContext db;
+        public HomeController(NewsDBContext context)
         {
-            _logger = logger;
+            db = context;
         }
-
         public IActionResult Index()
         {
-            return View();
+            var result = db.Categories.ToList();
+            return View(result);
         }
 
         public IActionResult Privacy()
