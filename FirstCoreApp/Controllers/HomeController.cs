@@ -16,15 +16,25 @@ namespace FirstCoreApp.Controllers
         {
             db = context;
         }
+
         public IActionResult Index()
         {
             var result = db.Categories.ToList();
             return View(result);
         }
+        [HttpGet]
         public IActionResult Contact()
         {
           
             return View();
+        }
+        [HttpPost]
+        public IActionResult SaveContact(ContactUs model)
+        {
+            db.Contacts.Add(model);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
 
