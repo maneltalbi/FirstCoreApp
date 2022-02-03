@@ -22,22 +22,8 @@ namespace FirstCoreApp.Controllers
             var result = db.Categories.ToList();
             return View(result);
         }
-        [HttpGet]
-        public IActionResult Contact()
-        {
-          
-            return View();
-        }
-        [HttpPost]
-        public IActionResult SaveContact(ContactUs model)
-        {
-            db.Contacts.Add(model);
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
-        }
-
-
+       
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

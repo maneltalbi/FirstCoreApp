@@ -1,4 +1,4 @@
-/**
+;/**
 * Template Name: Medicio - v4.7.0
 * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
 * Author: BootstrapMade.com
