@@ -5,14 +5,22 @@
         <div class="row">
             @foreach (var item in Model)
             {
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <a href="/News/Index/@item.Id">
                     <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="100">
+
                         <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                        <h4 class="title"><a href="">@item.Name</a></h4>
+
+                        <h4 class="title"><a href="/Home/News/@item.Id">@item.Name</a></h4>
                         <p class="description">@item.Description</p>
+
+
+
                     </div>
-                </div>
+                    </a>
+            </div>
+         
             }
             </div>
         

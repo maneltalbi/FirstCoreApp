@@ -22,8 +22,12 @@ namespace FirstCoreApp.Controllers
             var result = db.Categories.ToList();
             return View(result);
         }
-       
-       
+        public ActionResult News(int id)
+        {
+            var result = db.News.Where(x => x.CategoryId == id).OrderByDescending(x => x.Date).ToList();
+            return View(result);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
