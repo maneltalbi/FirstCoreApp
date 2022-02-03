@@ -3,7 +3,7 @@
     <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>الاخبار</h2>
+            <h2> الاخبار @ViewBag.Cat</h2>
         </div>
         <center>
 
@@ -21,7 +21,11 @@
                         </p>
 
                     </div>
+                 
                 </div>
+                <center>
+                    <a class="btn btn-danger" href="/Home/DeleteNews/@item.Id">Delete</a>
+                </center>
                 <hr />
             }
 

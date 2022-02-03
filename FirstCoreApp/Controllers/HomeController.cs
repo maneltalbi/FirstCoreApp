@@ -24,10 +24,18 @@ namespace FirstCoreApp.Controllers
         }
         public ActionResult News(int id)
         {
+            Categories c = db.Categories.Find(id);
+           ViewBag.Cat= c.Name;
             var result = db.News.Where(x => x.CategoryId == id).OrderByDescending(x => x.Date).ToList();
             return View(result);
         }
-
+        public ActionResult DeleteNews(int id)
+        {
+           var news= db.News.Find(id);
+            db.News.Remove(news);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
