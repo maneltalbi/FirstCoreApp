@@ -47,7 +47,7 @@ namespace FirstCoreApp.Controllers
         // GET: News/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace FirstCoreApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", news.CategoryId);
             return View(news);
         }
 
@@ -81,7 +81,7 @@ namespace FirstCoreApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", news.CategoryId);
             return View(news);
         }
 
@@ -117,7 +117,7 @@ namespace FirstCoreApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", news.CategoryId);
             return View(news);
         }
 
