@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FirstCoreApp.Controllers
 {
+
     public class HomeController : Controller
     {
         NewsDBContext db;
