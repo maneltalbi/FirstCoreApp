@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FirstCoreApp.Models.Teammember>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <section id="doctors" class="doctors section-bg">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Team Members</h2>
+            </div>
+
+            <div class="row">
+
+
+
+                @foreach (var item in Model)
+                {
+
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                        <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                            <div class="member-img">
+                                <img src="~/assets/img/teammembers/doctor.jpg" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
+                                <span>@Html.DisplayFor(modelItem => item.JobTitle)</span>
+
+                                <a asp-action="Edit" class="btn btn-success" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Details" class="btn btn-dark" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </section>
+</div>

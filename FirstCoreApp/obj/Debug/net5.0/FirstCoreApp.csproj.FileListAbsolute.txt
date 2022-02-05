@@ -1307,3 +1307,8 @@ C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Areas\Ide
 C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Views\Teammembers\Create.cshtml.g.cs
+C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Views\Teammembers\Delete.cshtml.g.cs
+C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Views\Teammembers\Details.cshtml.g.cs
+C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Views\Teammembers\Edit.cshtml.g.cs
+C:\Users\DELL\Desktop\FirstCoreApp\FirstCoreApp\obj\Debug\net5.0\Razor\Views\Teammembers\Index.cshtml.g.cs
