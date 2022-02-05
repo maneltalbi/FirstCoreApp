@@ -66,9 +66,10 @@
                     <li><a class="nav-link scrollto" href="/News">News CRUD</a></li>
                     <li><a class="nav-link scrollto" href="/Categories">Categories CRUD</a></li>
                     <li><a class="nav-link scrollto" asp-area="" asp-controller="Message" asp-action="Index">Show Messages</a></li>
+                    @*
                     <li><a class="nav-link scrollto" href="/Identity/Account/Register">Register</a></li>
-                    <li><a class="nav-link scrollto" href="/Identity/Account/Login">Login</a></li>
-
+                    <li><a class="nav-link scrollto" href="/Identity/Account/Login">Login</a></li>*@
+                    <partial name="_LoginPartial"/>
                 </ul>
             </nav><!-- .navbar -->
             @*<a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>*@
@@ -166,9 +167,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", false)
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="~/assets/js/main.js"></script>
 
 </body>
 
